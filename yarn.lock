@@ -161,6 +161,12 @@
   dependencies:
     tsickle "^0.21.0"
 
+"@angular/upgrade@^4.4.4":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-4.4.5.tgz#82696262de1f818d060ab99cfa072f88fcb4d5ac"
+  dependencies:
+    tslib "^1.7.1"
+
 "@ngrx/effects@^4.0.0":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-4.0.5.tgz#1224763800621b7305f9b18bc17ee09b25c861d1"
@@ -319,6 +325,10 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+angular@1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.6.tgz#fd5a3cfb437ce382d854ee01120797978527cb64"
 
 ansi-html@0.0.7:
   version "0.0.7"
