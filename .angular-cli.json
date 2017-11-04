@@ -5,9 +5,9 @@
   },
   "apps": [
     {
-      "name": "tasks",
-      "root": "apps\\tasks\\src",
-      "outDir": "dist/apps/tasks",
+      "name": "client",
+      "root": "apps\\client\\src",
+      "outDir": "dist/apps/client",
       "assets": [
         "assets",
         "favicon.ico"
@@ -30,9 +30,9 @@
       }
     },
     {
-      "name": "client",
-      "root": "apps\\client\\src",
-      "outDir": "dist/apps/client",
+      "name": "tasks",
+      "root": "apps\\tasks\\src",
+      "outDir": "dist/apps/tasks",
       "assets": [
         "assets",
         "favicon.ico"
