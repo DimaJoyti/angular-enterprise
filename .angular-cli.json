@@ -5,6 +5,31 @@
   },
   "apps": [
     {
+      "name": "tasks",
+      "root": "apps\\tasks\\src",
+      "outDir": "dist/apps/tasks",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "../../../tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
       "name": "client",
       "root": "apps\\client\\src",
       "outDir": "dist/apps/client",
@@ -33,31 +58,6 @@
       "name": "admin",
       "root": "apps\\admin\\src",
       "outDir": "dist/apps/admin",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "../../../test.js",
-      "tsconfig": "../../../tsconfig.app.json",
-      "testTsconfig": "../../../tsconfig.spec.json",
-      "prefix": "",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [],
-      "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
-    },
-    {
-      "name": "tasks",
-      "root": "apps\\tasks\\src",
-      "outDir": "dist/apps/tasks",
       "assets": [
         "assets",
         "favicon.ico"
