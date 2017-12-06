@@ -10,8 +10,13 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format": "find apps/ -iname '*.ts' | xargs clang-format -i && find libs/ -iname '*.ts' | xargs clang-format -i",
-    "nx-migrate": "node ./node_modules/@nrwl/schematics/src/migrator/migrator.js"
-  },
+    "nx-migrate": "node ./node_modules/@nrwl/schematics/src/migrator/migrator.js",
+    "prettier": "prettier --single-quote --parser typescript --write \"./src/**/*.ts\" && prettier --single-quote --parser scss --write \"./src/**/*.scss\"",
+    "release": "standard-version && git push --follow-tags origin master",
+    "admin": "ng serve --app=admin",
+    "client": "ng serve --app=client",
+    "prod:client": "ng build -prod --build-optimizer --app=client"
+   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.5",
