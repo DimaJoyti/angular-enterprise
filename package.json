@@ -9,7 +9,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "format": "find apps/ -iname '*.ts' | xargs clang-format -i && find libs/ -iname '*.ts' | xargs clang-format -i"
+    "format": "find apps/ -iname '*.ts' | xargs clang-format -i && find libs/ -iname '*.ts' | xargs clang-format -i",
+    "nx-migrate": "node ./node_modules/@nrwl/schematics/src/migrator/migrator.js",
+    "prettier": "prettier --single-quote --parser typescript --write \"./src/**/*.ts\" && prettier --single-quote --parser scss --write \"./src/**/*.scss\"",
+    "release": "standard-version && git push --follow-tags origin master",
+    "admin": "ng serve --app=admin",
+    "client": "ng serve --app=client",
+    "prod:client": "ng build -prod --build-optimizer --app=client"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +35,7 @@
     "@ngrx/router-store": "^4.1.0",
     "@ngrx/store": "^4.1.0",
     "@ngrx/store-devtools": "^4.0.0",
-    "@nrwl/nx": "nrwl/nx-build",
+    "@nrwl/nx": "0.3.0",
     "angular": "1.6.6",
     "core-js": "^2.5.1",
     "rxjs": "^5.5.2",
@@ -39,7 +45,7 @@
     "@angular/cli": "nrwl/fix-cli-build",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
-    "@nrwl/schematics": "nrwl/schematics-build",
+    "@nrwl/schematics": "0.3.0",
     "@types/jasmine": "~2.6.2",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.0.47",
