@@ -31,6 +31,8 @@ import {
   MatTooltipModule
 } from "@angular/material";
 
+import "hammerjs";
+
 /**
  * NgModule that includes all Material modules that are required to serve
  * the Material.

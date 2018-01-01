@@ -2,31 +2,26 @@
 <html>
 
 <head>
-    <title>Angular 2 Articles Catalog Application</title>
-    <link href="/styles.scss" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Angular 2 Articles Catalog Application</title>
+  <base href="/">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <base href="/" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Polyfill-->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="theme-color" content="#f48c5b">
 
-    <!-- SystemJS -->
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="./systemjs.config.js"></script>
+  <link rel="manifest" href="/manifest.json">
 
-    <script>
-        System.import('main.js').catch(function(err){ console.error(err); });
-    </script>
 </head>
 
 <body>
-    <my-app></my-app>
-    <script></script>
+  <my-app></my-app>
+  <script></script>
 </body>
 
 </html>
