@@ -7,7 +7,7 @@ import { Task, FilteredTasks, UrgencyMap } from "./../models/task.interface";
     moduleId: module.id,
     selector: "task",
     templateUrl: "task.component.html",
-    styleUrls: ["task.component.css"]
+    styleUrls: ["task.component.scss"]
 }) 
 
 export class TaskComponent {
