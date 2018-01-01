@@ -1,0 +1,23 @@
+.mat-card-content {
+    margin-top: 50px;
+}
+
+
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-half-width {
+  width: 250px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 80px;
+}

@@ -1,0 +1,45 @@
+
+<mat-grid-list cols="1" *ngIf = "isLoaded">
+    <mat-card class="dashboard-card">
+        
+    <mat-card-title>Редактирование задачи</mat-card-title>
+
+        <mat-card-content>
+            <form class="example-form">
+                <section class="example-section">
+                    <mat-checkbox mat-list-icon class="example-half-width" checked="false" #isSelected>{{isSelected.checked? 'Выполнено': 'Не выполнено'}}</mat-checkbox>
+                    <mat-select placeholder="Выберите срочность" class="example-half-width">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{ food.viewValue }}
+                        </mat-option>
+                    </mat-select>      
+                </section>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Название" value="Новая задача">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Описание задачи"></textarea>
+                </mat-form-field>
+
+                <a mat-raised-button [color]="accent" routerLink="/task"><mat-icon>check</mat-icon>Сохранить</a><br>
+            </form>
+
+        </mat-card-content>
+        
+        
+    </mat-card>
+</mat-grid-list>
+
+<mat-grid-list cols="1" *ngIf = "!isLoaded">
+     <mat-card class="loading-card">
+        <img class="loading" src="./assets/images/loading.gif">
+     </mat-card>
+</mat-grid-list>
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+.date-item{
+    width: 120px;
+    font-size: 14px;
+    opacity: 0.4;
+}
+.loading-card {
+    text-align: center;
+}
+mat-chip-list {
+    margin-right: 25px;
+    width: 135px;
+}
+
+mat-chip {
+    width: 70px;
+    text-align: center;
+}
+
+.list-mode {
+    flex-direction: row-reverse;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.mat-line {
+    padding: 2px 0;
+}
+
+.mat-list-icon {
+    font-size: 28px;
+    opacity: 0.8;
+}

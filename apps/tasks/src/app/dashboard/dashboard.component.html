@@ -1,0 +1,41 @@
+
+	<mat-grid-list cols="2" rowHeight="550px">
+		<mat-grid-tile>
+
+			<mat-card class="dashboard-card">
+				<a [routerLink]="'/task'">
+					<img mat-card-image src="./assets/images/list.jpg">
+				</a>
+				<mat-card-content>
+					<mat-card-title>Список задач</mat-card-title>
+					<p>
+					Cписок задач, которые вы бы хотели сохранить и не забыть из реализовать в будующем.
+					</p>
+				</mat-card-content>
+				<mat-card-actions>
+					<button [routerLink]="'/list'" mat-button>Смотреть задачи</button>
+				</mat-card-actions>
+				
+			</mat-card>
+
+		</mat-grid-tile>
+		<mat-grid-tile>
+
+			<mat-card class="dashboard-card">
+				<a [routerLink]="'/statistics'">
+					<img mat-card-image src="./assets/images/statistics.jpg">
+				</a>
+				<mat-card-content>
+					<mat-card-title>Статистика</mat-card-title>
+					<p>
+					Здесь вы сможете увидеть статистическую информацию, которая касается всех ваших задач
+					</p>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-button>Смотреть статистику</button>
+				</mat-card-actions>
+			</mat-card>
+
+
+		</mat-grid-tile>
+	</mat-grid-list>

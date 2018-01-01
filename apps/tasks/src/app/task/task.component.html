@@ -1,0 +1,48 @@
+                <!--<mat-checkbox mat-list-icon class="example-margin" checked="true"></mat-checkbox>-->
+
+<mat-grid-list cols="1" [style.display] = "isLoaded ? 'block': 'none'" >
+    <div class="list-mode">
+        <a mat-raised-button [color]="accent" routerLink="/task/new"><mat-icon>add</mat-icon>Добавить задачу</a><br>
+    </div>
+    <mat-card>
+        <h1>Список важных дел</h1>
+        <section class="list-mode">
+        <mat-slide-toggle
+            class="example-margin"
+            [color]="primary"
+            (click)="toggleCompleted()">
+            Показать завершенные
+        </mat-slide-toggle>
+        </section>
+
+        <mat-nav-list>
+            <div *ngIf="isCompletedVisible">
+                <h3 matSubheader>Завершенные задачи</h3>
+                <mat-list-item *ngFor="let completed of filteredTasks.completed" [routerLink]="'/task/' + completed.id">
+                    <mat-icon mat-list-icon>check_box</mat-icon>
+                    <h4 matLine>{{completed.name}}</h4>
+                    <mat-chip-list><mat-chip selected="true" color="{{urgencyMap[completed.urgency].code}}">{{urgencyMap[completed.urgency].name}}</mat-chip></mat-chip-list>
+                    <div matLine>{{completed.description}}</div>
+                    <div matLine class="date-item">{{completed.finishTo | date:"MM/dd/yy"}}</div>
+                </mat-list-item>
+            </div>
+            <mat-divider></mat-divider>
+            <h3 matSubheader>В процессе</h3>
+            <mat-list-item *ngFor="let uncompleted of filteredTasks.uncompleted" [routerLink]="'/task/' + uncompleted.id">
+                <mat-icon mat-list-icon>event_note</mat-icon>
+                <h4 matLine>{{uncompleted.name}}</h4>
+                <mat-chip-list><mat-chip selected="true" color="{{urgencyMap[uncompleted.urgency].code}}">{{urgencyMap[uncompleted.urgency].name}}</mat-chip></mat-chip-list>
+                <div matLine>{{uncompleted.description}}</div>
+                <div matLine class="date-item">{{uncompleted.finishTo | date:"MM/dd/yy"}}</div>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-card>
+
+</mat-grid-list>
+    
+
+<mat-grid-list cols="1" *ngIf = "!isLoaded">
+     <mat-card class="loading-card">
+        <img class="loading" src="./assets/images/loading.gif">
+     </mat-card>
+</mat-grid-list>
