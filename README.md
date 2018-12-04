@@ -4,5 +4,5 @@
 ## Getting Started
 
 ```
-npm installm & npm start
+npm install & npm start
 ```
