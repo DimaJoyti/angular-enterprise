@@ -1,41 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '@workshop/core-data';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'fem-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  title = 'ION PROJECTS';
-  isLoggedIn$: Observable<boolean> = this.authService.isAuthenticated$;
-  isLoggedIn;
-
+export class AppComponent {
   links = [
-    { path: '/projects', icon: 'work', label: 'Projects' }
+    { path: '/', icon: 'home', title: 'home' },
+    { path: '/widgets', icon: 'view_list', title: 'widgets' },
   ];
 
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) { }
+  logout() {  }
 
-  ngOnInit() {
-    this.isLoggedIn$
-      .subscribe(loggedIn => {
-        const path = (loggedIn) ? '' : 'login';
-        this.isLoggedIn = loggedIn;
-        this.router.navigate([path]);
-      })
-  }
-
-  logout() {
-    this.authService.logout();
-  }
-
-  isSidenaveOpen(component, authentication) {
-    return component.opened && authentication;
-  }
+  toggleSidenav() { }
 }
